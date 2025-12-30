@@ -21,10 +21,9 @@ namespace StudentRegistrationForm.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> GetByGuidAsync(Guid pid)
+        public async Task<T> GetByIdAsync(int id)
         {
-            // Search for entity with matching Pid property
-            return await _dbSet.FirstOrDefaultAsync(e => EF.Property<Guid>(e, "Pid") == pid);
+            return await _dbSet.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id);
         }
 
         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)

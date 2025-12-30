@@ -6,7 +6,7 @@ namespace StudentRegistrationForm.Interfaces.RepositoryInterfaces
     {
         Task<IEnumerable<T>> GetAllAsync();
         //Task<T> GetByIdAsync(int id);
-        Task<T> GetByGuidAsync(Guid pid);
+        Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
 
         Task AddAsync(T entity);

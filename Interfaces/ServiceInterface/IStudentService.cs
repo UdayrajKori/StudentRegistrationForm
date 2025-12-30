@@ -6,7 +6,7 @@ namespace StudentRegistrationForm.Interfaces.ServiceInterface
     public interface IStudentService
     {
         //Task<Student> GetStudentByIdAsync(int id);
-        Task<Student> GetStudentByPidAsync(Guid pid);
+        Task<Student> GetStudentByIdAsync(int id);
         Task<List<Student>> GetAllStudentsAsync();
         Task AddStudentAsync(CompleteRequestDTO dto);
         Task UpdateStudentAsync(Student student);

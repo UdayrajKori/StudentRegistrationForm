@@ -16,253 +16,176 @@ namespace StudentRegistrationForm.Services
 
         public async Task AddStudentAsync(CompleteRequestDTO dto)
         {
-            // 1. Create Student with auto-generated Pid
+            var now = DateTime.UtcNow;
+
+            // Create Student with all related entities using navigation properties
             var student = new Student
             {
+                // Student basic info
                 FirstName = dto.FirstName,
                 MiddleName = dto.MiddleName,
                 LastName = dto.LastName,
                 DateOfBirth = dto.DateOfBirth,
                 PlaceOfBirth = dto.PlaceOfBirth,
                 PhotoPath = dto.PhotoPath,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
+                CreatedOn = now,
+                UpdatedOn = now,
+
+                // One-to-One relationships via navigation properties
+                PersonalDetails = new PersonalDetails
+                {
+                    Gender = dto.Gender,
+                    Nationality = dto.Nationality,
+                    BloodGroup = dto.BloodGroup,
+                    MaritalStatus = dto.MaritalStatus,
+                    Religion = dto.Religion,
+                    Ethnicity = dto.Ethnicity,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                },
+
+                ContactDetail = new ContactDetail
+                {
+                    Email = dto.Email,
+                    AlternateEmail = dto.AlternateEmail,
+                    PrimaryMobile = dto.PrimaryMobile,
+                    SecondaryMobile = dto.SecondaryMobile,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                },
+
+                FinancialDetail = new FinancialDetail
+                {
+                    FeeCategory = dto.FeeCategory,
+                    ScholarshipType = dto.ScholarshipType,
+                    ScholarshipProviderName = dto.ScholarshipProviderName,
+                    ScholarshipAmount = dto.ScholarshipAmount,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                },
+
+                BankDetail = new BankDetail
+                {
+                    AccountHolderName = dto.AccountHolderName,
+                    BankName = dto.BankName,
+                    AccountNumber = dto.AccountNumber,
+                    Branch = dto.Branch,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                },
+
+                CitizenshipDetail = new CitizenshipDetail
+                {
+                    CitizenshipNumber = dto.CitizenshipNumber,
+                    IssueDate = dto.IssueDate,
+                    IssueDistrict = dto.IssueDistrict,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                },
+
+                AcademicEnrollment = new AcademicEnrollment
+                {
+                    Faculty = dto.Faculty,
+                    Program = dto.Program,
+                    Level = dto.Level,
+                    AcademicYear = dto.AcademicYear,
+                    Semester = dto.Semester,
+                    Section = dto.Section,
+                    RollNumber = dto.RollNumber,
+                    RegistrationNumber = dto.RegistrationNumber,
+                    EnrollmentDate = dto.EnrollmentDate,
+                    AcademicStatus = dto.AcademicStatus,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                },
+
+                Declaration = new Declaration
+                {
+                    IsAgreed = dto.IsAgreed,
+                    ApplicationDate = dto.ApplicationDate,
+                    Place = dto.Place,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                },
+
+                // One-to-Many relationships via navigation properties
+                Addresses = dto.Addresses?.Select(a => new Address
+                {
+                    AddressType = a.AddressType,
+                    Province = a.Province,
+                    District = a.District,
+                    Municipality = a.Municipality,
+                    WardNumber = a.WardNumber,
+                    ToleStreet = a.ToleStreet,
+                    HouseNumber = a.HouseNumber,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                }).ToList() ?? new List<Address>(),
+
+                EmergencyContacts = dto.EmergencyContacts?.Select(c => new EmergencyContact
+                {
+                    ContactName = c.ContactName,
+                    Relation = c.Relation,
+                    ContactNumber = c.ContactNumber,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                }).ToList() ?? new List<EmergencyContact>(),
+
+                DisabilityDetails = dto.DisabilityDetails?.Select(d => new DisabilityDetail
+                {
+                    DisabilityType = d.DisabilityType,
+                    DisabilityPercentage = d.DisabilityPercentage,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                }).ToList() ?? new List<DisabilityDetail>(),
+
+                ParentGuardians = dto.ParentGuardians?.Select(p => new ParentGuardian
+                {
+                    ParentType = p.ParentType,
+                    FullName = p.FullName,
+                    Occupation = p.Occupation,
+                    Designation = p.Designation,
+                    Organization = p.Organization,
+                    MobileNumber = p.MobileNumber,
+                    GardianEmail = p.GardianEmail,
+                    AnnualFamilyIncome = p.AnnualFamilyIncome,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                }).ToList() ?? new List<ParentGuardian>(),
+
+                AcademicHistories = dto.AcademicHistories?.Select(h => new AcademicHistory
+                {
+                    Qualification = h.Qualification,
+                    BoardOrUniversity = h.BoardOrUniversity,
+                    InstitutionName = h.InstitutionName,
+                    PassedYear = h.PassedYear,
+                    DivisionOrGPA = h.DivisionOrGPA,
+                    MarksheetPath = h.MarksheetPath,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                }).ToList() ?? new List<AcademicHistory>(),
+
+                ExtracurricularDetails = dto.ExtracurricularDetails?.Select(e => new ExtracurricularDetail
+                {
+                    Interests = e.Interests,
+                    Achievements = e.Achievements,
+                    ScholarType = e.ScholarType,
+                    TransportMethod = e.TransportMethod,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                }).ToList() ?? new List<ExtracurricularDetail>(),
+
+                Documents = dto.Documents?.Select(doc => new StudentDocument
+                {
+                    DocumentType = doc.DocumentType,
+                    FilePath = doc.FilePath,
+                    CreatedOn = now,
+                    UpdatedOn = now
+                }).ToList() ?? new List<StudentDocument>()
             };
 
+            // Single transaction - EF Core handles all relationships
             await _unitOfWork.Students.AddAsync(student);
-            await _unitOfWork.SaveChangesAsync(); // Save to generate Pid
-
-            var studentPid = student.Pid; // Get the generated Pid
-
-            // 2. Create all related entities using StudentPid
-            var personalDetails = new PersonalDetails
-            {
-                StudentPid = studentPid,
-                Gender = dto.Gender,
-                Nationality = dto.Nationality,
-                BloodGroup = dto.BloodGroup,
-                MaritalStatus = dto.MaritalStatus,
-                Religion = dto.Religion,
-                Ethnicity = dto.Ethnicity,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.PersonalDetails.AddAsync(personalDetails);
-
-            var contactDetail = new ContactDetail
-            {
-                StudentPid = studentPid,
-                Email = dto.Email,
-                AlternateEmail = dto.AlternateEmail,
-                PrimaryMobile = dto.PrimaryMobile,
-                SecondaryMobile = dto.SecondaryMobile,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.ContactDetails.AddAsync(contactDetail);
-
-            var financialDetail = new FinancialDetail
-            {
-                StudentPid = studentPid,
-                FeeCategory = dto.FeeCategory,
-                ScholarshipType = dto.ScholarshipType,
-                ScholarshipProviderName = dto.ScholarshipProviderName,
-                ScholarshipAmount = dto.ScholarshipAmount,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.FinancialDetails.AddAsync(financialDetail);
-
-            var bankDetail = new BankDetail
-            {
-                StudentPid = studentPid,
-                AccountHolderName = dto.AccountHolderName,
-                BankName = dto.BankName,
-                AccountNumber = dto.AccountNumber,
-                Branch = dto.Branch,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.BankDetails.AddAsync(bankDetail);
-
-            var citizenshipDetail = new CitizenshipDetail
-            {
-                StudentPid = studentPid,
-                CitizenshipNumber = dto.CitizenshipNumber,
-                IssueDate = dto.IssueDate,
-                IssueDistrict = dto.IssueDistrict,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.CitizenshipDetails.AddAsync(citizenshipDetail);
-
-            var academicEnrollment = new AcademicEnrollment
-            {
-                StudentPid = studentPid,
-                Faculty = dto.Faculty,
-                Program = dto.Program,
-                Level = dto.Level,
-                AcademicYear = dto.AcademicYear,
-                Semester = dto.Semester,
-                Section = dto.Section,
-                RollNumber = dto.RollNumber,
-                RegistrationNumber = dto.RegistrationNumber,
-                EnrollmentDate = dto.EnrollmentDate,
-                AcademicStatus = dto.AcademicStatus,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.AcademicEnrollments.AddAsync(academicEnrollment);
-
-            var declaration = new Declaration
-            {
-                StudentPid = studentPid,
-                IsAgreed = dto.IsAgreed,
-                ApplicationDate = dto.ApplicationDate,
-                Place = dto.Place,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.Declarations.AddAsync(declaration);
-
-            // Handle Multiple Addresses
-            if (dto.Addresses != null && dto.Addresses.Any())
-            {
-                foreach (var addressDto in dto.Addresses)
-                {
-                    var address = new Address
-                    {
-                        StudentPid = studentPid,
-                        AddressType = addressDto.AddressType,
-                        Province = addressDto.Province,
-                        District = addressDto.District,
-                        Municipality = addressDto.Municipality,
-                        WardNumber = addressDto.WardNumber,
-                        ToleStreet = addressDto.ToleStreet,
-                        HouseNumber = addressDto.HouseNumber,
-                        CreatedOn = DateTime.UtcNow,
-                        UpdatedOn = DateTime.UtcNow
-                    };
-                    await _unitOfWork.Addresses.AddAsync(address);
-                }
-            }
-
-            // Handle Multiple Emergency Contacts
-            if (dto.EmergencyContacts != null && dto.EmergencyContacts.Any())
-            {
-                foreach (var contactDto in dto.EmergencyContacts)
-                {
-                    var emergencyContact = new EmergencyContact
-                    {
-                        StudentPid = studentPid,
-                        ContactName = contactDto.ContactName,
-                        Relation = contactDto.Relation,
-                        ContactNumber = contactDto.ContactNumber,
-                        CreatedOn = DateTime.UtcNow,
-                        UpdatedOn = DateTime.UtcNow
-                    };
-                    await _unitOfWork.EmergencyContacts.AddAsync(emergencyContact);
-                }
-            }
-
-            // Handle Multiple Disability Details
-            if (dto.DisabilityDetails != null && dto.DisabilityDetails.Any())
-            {
-                foreach (var disabilityDto in dto.DisabilityDetails)
-                {
-                    var disabilityDetail = new DisabilityDetail
-                    {
-                        StudentPid = studentPid,
-                        DisabilityType = disabilityDto.DisabilityType,
-                        DisabilityPercentage = disabilityDto.DisabilityPercentage,
-                        CreatedOn = DateTime.UtcNow,
-                        UpdatedOn = DateTime.UtcNow
-                    };
-                    await _unitOfWork.DisabilityDetails.AddAsync(disabilityDetail);
-                }
-            }
-
-            // Handle Multiple Parent/Guardians
-            if (dto.ParentGuardians != null && dto.ParentGuardians.Any())
-            {
-                foreach (var parentDto in dto.ParentGuardians)
-                {
-                    var parentGuardian = new ParentGuardian
-                    {
-                        StudentPid = studentPid,
-                        ParentType = parentDto.ParentType,
-                        FullName = parentDto.FullName,
-                        Occupation = parentDto.Occupation,
-                        Designation = parentDto.Designation,
-                        Organization = parentDto.Organization,
-                        MobileNumber = parentDto.MobileNumber,
-                        GardianEmail = parentDto.GardianEmail,
-                        AnnualFamilyIncome = parentDto.AnnualFamilyIncome,
-                        CreatedOn = DateTime.UtcNow,
-                        UpdatedOn = DateTime.UtcNow
-                    };
-                    await _unitOfWork.ParentGuardians.AddAsync(parentGuardian);
-                }
-            }
-
-            // Handle Multiple Academic Histories
-            if (dto.AcademicHistories != null && dto.AcademicHistories.Any())
-            {
-                foreach (var historyDto in dto.AcademicHistories)
-                {
-                    var academicHistory = new AcademicHistory
-                    {
-                        StudentPid = studentPid,
-                        Qualification = historyDto.Qualification,
-                        BoardOrUniversity = historyDto.BoardOrUniversity,
-                        InstitutionName = historyDto.InstitutionName,
-                        PassedYear = historyDto.PassedYear,
-                        DivisionOrGPA = historyDto.DivisionOrGPA,
-                        MarksheetPath = historyDto.MarksheetPath,
-                        CreatedOn = DateTime.UtcNow,
-                        UpdatedOn = DateTime.UtcNow
-                    };
-                    await _unitOfWork.AcademicHistories.AddAsync(academicHistory);
-                }
-            }
-
-            // Handle Multiple Extracurricular Details
-            if (dto.ExtracurricularDetails != null && dto.ExtracurricularDetails.Any())
-            {
-                foreach (var detail in dto.ExtracurricularDetails)
-                {
-                    var extracurricularDetail = new ExtracurricularDetail
-                    {
-                        StudentPid = studentPid,
-                        Interests = detail.Interests,
-                        Achievements = detail.Achievements,
-                        ScholarType = detail.ScholarType,
-                        TransportMethod = detail.TransportMethod,
-                        CreatedOn = DateTime.UtcNow,
-                        UpdatedOn = DateTime.UtcNow
-                    };
-                    await _unitOfWork.ExtracurricularDetails.AddAsync(extracurricularDetail);
-                }
-            }
-
-            // Handle Multiple Documents
-            if (dto.Documents != null && dto.Documents.Any())
-            {
-                foreach (var doc in dto.Documents)
-                {
-                    var studentDocument = new StudentDocument
-                    {
-                        StudentPid = studentPid,
-                        DocumentType = doc.DocumentType,
-                        FilePath = doc.FilePath,
-                        CreatedOn = DateTime.UtcNow,
-                        UpdatedOn = DateTime.UtcNow
-                    };
-                    await _unitOfWork.StudentDocuments.AddAsync(studentDocument);
-                }
-            }
-
-            // Final save for all related entities
             await _unitOfWork.SaveChangesAsync();
         }
 
@@ -277,9 +200,9 @@ namespace StudentRegistrationForm.Services
             return (await _unitOfWork.Students.GetAllAsync()).ToList();
         }
 
-        public async Task<Student> GetStudentByPidAsync(Guid pid)
+        public async Task<Student> GetStudentByIdAsync(int id)  // Changed from GetStudentByPidAsync
         {
-            return await _unitOfWork.Students.GetByGuidAsync(pid);
+            return await _unitOfWork.Students.GetByIdAsync(id);  // Changed from GetByGuidAsync
         }
 
         public async Task UpdateStudentAsync(Student student)

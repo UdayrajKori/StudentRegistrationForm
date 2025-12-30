@@ -12,8 +12,8 @@ using StudentRegistrationForm.Data;
 namespace StudentRegistrationForm.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251229113151_InitialDatabaseExecution")]
-    partial class InitialDatabaseExecution
+    [Migration("20251230115241_initialDbCreation")]
+    partial class initialDbCreation
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,15 +80,16 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<int>("Semester")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId")
+                        .IsUnique();
 
                     b.ToTable("AcademicEnrollments");
                 });
@@ -137,15 +138,15 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<int>("Qualification")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("AcademicHistories");
                 });
@@ -191,8 +192,8 @@ namespace StudentRegistrationForm.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ToleStreet")
                         .IsRequired()
@@ -206,7 +207,7 @@ namespace StudentRegistrationForm.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("Addresses");
                 });
@@ -249,15 +250,16 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<Guid>("Pid")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId")
+                        .IsUnique();
 
                     b.ToTable("BankDetails");
                 });
@@ -296,15 +298,16 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<Guid>("Pid")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId")
+                        .IsUnique();
 
                     b.ToTable("CitizenshipDetails");
                 });
@@ -346,15 +349,16 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<string>("SecondaryMobile")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId")
+                        .IsUnique();
 
                     b.ToTable("ContactDetails");
                 });
@@ -392,15 +396,16 @@ namespace StudentRegistrationForm.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId")
+                        .IsUnique();
 
                     b.ToTable("Declarations");
                 });
@@ -434,15 +439,15 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<Guid>("Pid")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("DisabilityDetails");
                 });
@@ -481,15 +486,15 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<int>("Relation")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("EmergencyContacts");
                 });
@@ -526,8 +531,8 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<int>("ScholarType")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("TransportMethod")
                         .HasColumnType("int");
@@ -537,7 +542,7 @@ namespace StudentRegistrationForm.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("ExtracurricularDetails");
                 });
@@ -577,15 +582,16 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<int>("ScholarshipType")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId")
+                        .IsUnique();
 
                     b.ToTable("FinancialDetails");
                 });
@@ -639,15 +645,15 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<Guid>("Pid")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("ParentGuardians");
                 });
@@ -694,15 +700,16 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<string>("Religion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId")
+                        .IsUnique();
 
                     b.ToTable("PersonalDetails");
                 });
@@ -796,157 +803,202 @@ namespace StudentRegistrationForm.Migrations
                     b.Property<Guid>("Pid")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("StudentPid")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedOn")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentPid");
+                    b.HasIndex("StudentId");
 
                     b.ToTable("StudentDocuments");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.AcademicEnrollment", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithOne("AcademicEnrollment")
+                        .HasForeignKey("StudentRegistrationForm.Models.AcademicEnrollment", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.AcademicHistory", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithMany("AcademicHistories")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.Address", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithMany("Addresses")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.BankDetail", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithOne("BankDetail")
+                        .HasForeignKey("StudentRegistrationForm.Models.BankDetail", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.CitizenshipDetail", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithOne("CitizenshipDetail")
+                        .HasForeignKey("StudentRegistrationForm.Models.CitizenshipDetail", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.ContactDetail", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithOne("ContactDetail")
+                        .HasForeignKey("StudentRegistrationForm.Models.ContactDetail", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.Declaration", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithOne("Declaration")
+                        .HasForeignKey("StudentRegistrationForm.Models.Declaration", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.DisabilityDetail", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithMany("DisabilityDetails")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.EmergencyContact", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithMany("EmergencyContacts")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.ExtracurricularDetail", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithMany("ExtracurricularDetails")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.FinancialDetail", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithOne("FinancialDetail")
+                        .HasForeignKey("StudentRegistrationForm.Models.FinancialDetail", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.ParentGuardian", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithMany("ParentGuardians")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.PersonalDetails", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithOne("PersonalDetails")
+                        .HasForeignKey("StudentRegistrationForm.Models.PersonalDetails", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("StudentRegistrationForm.Models.StudentDocument", b =>
                 {
-                    b.HasOne("StudentRegistrationForm.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentPid")
-                        .HasPrincipalKey("Pid")
+                    b.HasOne("StudentRegistrationForm.Models.Student", "Student")
+                        .WithMany("Documents")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("StudentRegistrationForm.Models.Student", b =>
+                {
+                    b.Navigation("AcademicEnrollment");
+
+                    b.Navigation("AcademicHistories");
+
+                    b.Navigation("Addresses");
+
+                    b.Navigation("BankDetail");
+
+                    b.Navigation("CitizenshipDetail");
+
+                    b.Navigation("ContactDetail");
+
+                    b.Navigation("Declaration");
+
+                    b.Navigation("DisabilityDetails");
+
+                    b.Navigation("Documents");
+
+                    b.Navigation("EmergencyContacts");
+
+                    b.Navigation("ExtracurricularDetails");
+
+                    b.Navigation("FinancialDetail");
+
+                    b.Navigation("ParentGuardians");
+
+                    b.Navigation("PersonalDetails");
                 });
 #pragma warning restore 612, 618
         }

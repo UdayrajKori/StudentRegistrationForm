@@ -39,34 +39,7 @@ namespace StudentRegistrationForm.Data
                 .Property(f => f.ScholarshipAmount)
                 .HasColumnType("decimal(18,2)"); // Max: 9,999,999,999,999,999.99
 
-            // Configure relationships using Pid as foreign key
-            ConfigureRelationship<PersonalDetails>(modelBuilder, "StudentPid");
-            ConfigureRelationship<ContactDetail>(modelBuilder, "StudentPid");
-            ConfigureRelationship<ParentGuardian>(modelBuilder, "StudentPid");
-            ConfigureRelationship<EmergencyContact>(modelBuilder, "StudentPid");
-            ConfigureRelationship<Address>(modelBuilder, "StudentPid");
-            ConfigureRelationship<DisabilityDetail>(modelBuilder, "StudentPid");
-            ConfigureRelationship<FinancialDetail>(modelBuilder, "StudentPid");
-            ConfigureRelationship<BankDetail>(modelBuilder, "StudentPid");
-            ConfigureRelationship<CitizenshipDetail>(modelBuilder, "StudentPid");
-            ConfigureRelationship<AcademicHistory>(modelBuilder, "StudentPid");
-            ConfigureRelationship<AcademicEnrollment>(modelBuilder, "StudentPid");
-            ConfigureRelationship<ExtracurricularDetail>(modelBuilder, "StudentPid");
-            ConfigureRelationship<StudentDocument>(modelBuilder, "StudentPid");
-            ConfigureRelationship<Declaration>(modelBuilder, "StudentPid");
-
             base.OnModelCreating(modelBuilder);
-        }
-
-        private void ConfigureRelationship<TEntity>(ModelBuilder modelBuilder, string foreignKeyName)
-            where TEntity : class
-        {
-            modelBuilder.Entity<TEntity>()
-                .HasOne<Student>()
-                .WithMany()
-                .HasForeignKey(foreignKeyName)
-                .HasPrincipalKey(s => s.Pid)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

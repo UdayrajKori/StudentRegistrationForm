@@ -1,12 +1,13 @@
 ﻿using StudentRegistrationForm.EnumValues;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentRegistrationForm.Models
 {
     public class ParentGuardian : BaseEntity
     {
         [Required]
-        public Guid StudentPid { get; set; }
+        public int StudentId { get; set; }
 
         [Required]
         public GardianType ParentType { get; set; }
@@ -22,5 +23,9 @@ namespace StudentRegistrationForm.Models
 
         public string? GardianEmail { get; set; }
         public AnnualIncome? AnnualFamilyIncome { get; set; }
+
+        // Navigation property
+        [ForeignKey(nameof(StudentId))]
+        public virtual Student Student { get; set; }
     }
 }

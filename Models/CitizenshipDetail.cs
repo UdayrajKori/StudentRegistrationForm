@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentRegistrationForm.Models
 {
     public class CitizenshipDetail: BaseEntity
     {
         [Required]
-        public Guid StudentPid { get; set; }
+        public int StudentId { get; set; }
 
         [Required]
         public string CitizenshipNumber { get; set; }
@@ -15,5 +16,9 @@ namespace StudentRegistrationForm.Models
 
         [Required]
         public string IssueDistrict { get; set; }
+
+        // Navigation property
+        [ForeignKey(nameof(StudentId))]
+        public virtual Student Student { get; set; }
     }
 }

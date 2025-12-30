@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentRegistrationForm.Models
 {
     public class ContactDetail: BaseEntity
     {
         [Required]
-        public Guid StudentPid { get; set; }
+        public int StudentId { get; set; }
 
         [Required, EmailAddress]
         public string Email { get; set; }
@@ -17,5 +18,9 @@ namespace StudentRegistrationForm.Models
         public string PrimaryMobile { get; set; }
 
         public string? SecondaryMobile { get; set; }
+
+        // Navigation property
+        [ForeignKey(nameof(StudentId))]
+        public virtual Student Student { get; set; }
     }
 }

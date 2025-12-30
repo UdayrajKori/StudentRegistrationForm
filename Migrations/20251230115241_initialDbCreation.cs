@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StudentRegistrationForm.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDatabaseExecution : Migration
+    public partial class initialDbCreation : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,7 +33,6 @@ namespace StudentRegistrationForm.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Students", x => x.Id);
-                    table.UniqueConstraint("AK_Students_Pid", x => x.Pid);
                 });
 
             migrationBuilder.CreateTable(
@@ -42,7 +41,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     Faculty = table.Column<int>(type: "int", nullable: false),
                     Program = table.Column<int>(type: "int", nullable: false),
                     Level = table.Column<int>(type: "int", nullable: false),
@@ -64,10 +63,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_AcademicEnrollments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AcademicEnrollments_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_AcademicEnrollments_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -77,7 +76,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     Qualification = table.Column<int>(type: "int", nullable: false),
                     BoardOrUniversity = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     InstitutionName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -95,10 +94,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_AcademicHistories", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AcademicHistories_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_AcademicHistories_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -108,7 +107,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     AddressType = table.Column<int>(type: "int", nullable: false),
                     Province = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     District = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -127,10 +126,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_Addresses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Addresses_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_Addresses_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -140,7 +139,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     AccountHolderName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BankName = table.Column<int>(type: "int", nullable: false),
                     AccountNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -156,10 +155,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_BankDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BankDetails_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_BankDetails_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -169,7 +168,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     CitizenshipNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IssueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IssueDistrict = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -184,10 +183,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_CitizenshipDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CitizenshipDetails_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_CitizenshipDetails_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -197,7 +196,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AlternateEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimaryMobile = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -213,10 +212,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_ContactDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ContactDetails_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_ContactDetails_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -226,7 +225,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     IsAgreed = table.Column<bool>(type: "bit", nullable: false),
                     ApplicationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -241,10 +240,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_Declarations", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Declarations_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_Declarations_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -254,7 +253,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     DisabilityType = table.Column<int>(type: "int", nullable: false),
                     DisabilityPercentage = table.Column<int>(type: "int", nullable: true),
                     Pid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -268,10 +267,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_DisabilityDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DisabilityDetails_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_DisabilityDetails_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -281,7 +280,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     ContactName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Relation = table.Column<int>(type: "int", nullable: false),
                     ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -296,10 +295,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_EmergencyContacts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_EmergencyContacts_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_EmergencyContacts_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -309,7 +308,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     Interests = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Achievements = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ScholarType = table.Column<int>(type: "int", nullable: false),
@@ -325,10 +324,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_ExtracurricularDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ExtracurricularDetails_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_ExtracurricularDetails_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -338,7 +337,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     FeeCategory = table.Column<int>(type: "int", nullable: false),
                     ScholarshipType = table.Column<int>(type: "int", nullable: false),
                     ScholarshipProviderName = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -354,10 +353,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_FinancialDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_FinancialDetails_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_FinancialDetails_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -367,7 +366,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     ParentType = table.Column<int>(type: "int", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Occupation = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -387,10 +386,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_ParentGuardians", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ParentGuardians_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_ParentGuardians_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -400,7 +399,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     Gender = table.Column<int>(type: "int", nullable: false),
                     Nationality = table.Column<int>(type: "int", nullable: false),
                     BloodGroup = table.Column<int>(type: "int", nullable: true),
@@ -418,10 +417,10 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_PersonalDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PersonalDetails_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_PersonalDetails_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -431,7 +430,7 @@ namespace StudentRegistrationForm.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentPid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     DocumentType = table.Column<int>(type: "int", nullable: false),
                     FilePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Pid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -445,82 +444,89 @@ namespace StudentRegistrationForm.Migrations
                 {
                     table.PrimaryKey("PK_StudentDocuments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_StudentDocuments_Students_StudentPid",
-                        column: x => x.StudentPid,
+                        name: "FK_StudentDocuments_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "Pid",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AcademicEnrollments_StudentPid",
+                name: "IX_AcademicEnrollments_StudentId",
                 table: "AcademicEnrollments",
-                column: "StudentPid");
+                column: "StudentId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_AcademicHistories_StudentPid",
+                name: "IX_AcademicHistories_StudentId",
                 table: "AcademicHistories",
-                column: "StudentPid");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Addresses_StudentPid",
+                name: "IX_Addresses_StudentId",
                 table: "Addresses",
-                column: "StudentPid");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BankDetails_StudentPid",
+                name: "IX_BankDetails_StudentId",
                 table: "BankDetails",
-                column: "StudentPid");
+                column: "StudentId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_CitizenshipDetails_StudentPid",
+                name: "IX_CitizenshipDetails_StudentId",
                 table: "CitizenshipDetails",
-                column: "StudentPid");
+                column: "StudentId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ContactDetails_StudentPid",
+                name: "IX_ContactDetails_StudentId",
                 table: "ContactDetails",
-                column: "StudentPid");
+                column: "StudentId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Declarations_StudentPid",
+                name: "IX_Declarations_StudentId",
                 table: "Declarations",
-                column: "StudentPid");
+                column: "StudentId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_DisabilityDetails_StudentPid",
+                name: "IX_DisabilityDetails_StudentId",
                 table: "DisabilityDetails",
-                column: "StudentPid");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EmergencyContacts_StudentPid",
+                name: "IX_EmergencyContacts_StudentId",
                 table: "EmergencyContacts",
-                column: "StudentPid");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExtracurricularDetails_StudentPid",
+                name: "IX_ExtracurricularDetails_StudentId",
                 table: "ExtracurricularDetails",
-                column: "StudentPid");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FinancialDetails_StudentPid",
+                name: "IX_FinancialDetails_StudentId",
                 table: "FinancialDetails",
-                column: "StudentPid");
+                column: "StudentId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ParentGuardians_StudentPid",
+                name: "IX_ParentGuardians_StudentId",
                 table: "ParentGuardians",
-                column: "StudentPid");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersonalDetails_StudentPid",
+                name: "IX_PersonalDetails_StudentId",
                 table: "PersonalDetails",
-                column: "StudentPid");
+                column: "StudentId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_StudentDocuments_StudentPid",
+                name: "IX_StudentDocuments_StudentId",
                 table: "StudentDocuments",
-                column: "StudentPid");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Students_Pid",
