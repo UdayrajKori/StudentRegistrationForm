@@ -51,6 +51,42 @@
   },
   "components": {
     "schemas": {
+      "AcademicHistoryDTO": {
+        "required": [
+          "boardOrUniversity",
+          "divisionOrGPA",
+          "institutionName",
+          "passedYear",
+          "qualification"
+        ],
+        "type": "object",
+        "properties": {
+          "qualification": {
+            "$ref": "#/components/schemas/Qualification"
+          },
+          "boardOrUniversity": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "institutionName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "passedYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "divisionOrGPA": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "marksheetPath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AcademicProgram": {
         "enum": [
           0,
@@ -87,6 +123,47 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "AddressDTO": {
+        "required": [
+          "addressType",
+          "district",
+          "municipality",
+          "province",
+          "toleStreet",
+          "wardNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "addressType": {
+            "$ref": "#/components/schemas/AddressType"
+          },
+          "province": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "district": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "municipality": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "wardNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "toleStreet": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "houseNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "AddressType": {
         "enum": [
@@ -134,9 +211,6 @@
         "format": "int32"
       },
       "CompleteRequestDTO": {
-        "required": [
-          "addressType"
-        ],
         "type": "object",
         "properties": {
           "firstName": {
@@ -183,36 +257,6 @@
             "type": "string",
             "nullable": true
           },
-          "parentType": {
-            "$ref": "#/components/schemas/GardianType"
-          },
-          "fullName": {
-            "type": "string",
-            "nullable": true
-          },
-          "occupation": {
-            "type": "string",
-            "nullable": true
-          },
-          "designation": {
-            "type": "string",
-            "nullable": true
-          },
-          "organization": {
-            "type": "string",
-            "nullable": true
-          },
-          "mobileNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "gardianEmail": {
-            "type": "string",
-            "nullable": true
-          },
-          "annualFamilyIncome": {
-            "$ref": "#/components/schemas/AnnualIncome"
-          },
           "email": {
             "type": "string",
             "nullable": true
@@ -227,52 +271,6 @@
           },
           "secondaryMobile": {
             "type": "string",
-            "nullable": true
-          },
-          "contactName": {
-            "type": "string",
-            "nullable": true
-          },
-          "relation": {
-            "$ref": "#/components/schemas/GardianType"
-          },
-          "contactNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "addressType": {
-            "$ref": "#/components/schemas/AddressType"
-          },
-          "province": {
-            "type": "string",
-            "nullable": true
-          },
-          "district": {
-            "type": "string",
-            "nullable": true
-          },
-          "municipality": {
-            "type": "string",
-            "nullable": true
-          },
-          "wardNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "toleStreet": {
-            "type": "string",
-            "nullable": true
-          },
-          "houseNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "disabilityType": {
-            "$ref": "#/components/schemas/DisabilityType"
-          },
-          "disabilityPercentage": {
-            "type": "integer",
-            "format": "int32",
             "nullable": true
           },
           "feeCategory": {
@@ -317,29 +315,6 @@
             "type": "string",
             "nullable": true
           },
-          "qualification": {
-            "$ref": "#/components/schemas/Qualification"
-          },
-          "boardOrUniversity": {
-            "type": "string",
-            "nullable": true
-          },
-          "institutionName": {
-            "type": "string",
-            "nullable": true
-          },
-          "passedYear": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "divisionOrGPA": {
-            "type": "string",
-            "nullable": true
-          },
-          "marksheetPath": {
-            "type": "string",
-            "nullable": true
-          },
           "faculty": {
             "$ref": "#/components/schemas/Faculty"
           },
@@ -373,27 +348,6 @@
           "academicStatus": {
             "$ref": "#/components/schemas/AcademicStatus"
           },
-          "interests": {
-            "type": "string",
-            "nullable": true
-          },
-          "achievements": {
-            "type": "string",
-            "nullable": true
-          },
-          "scholarType": {
-            "$ref": "#/components/schemas/ScholarType"
-          },
-          "transportMethod": {
-            "$ref": "#/components/schemas/TransportationMethod"
-          },
-          "documentType": {
-            "$ref": "#/components/schemas/DocumentType"
-          },
-          "filePath": {
-            "type": "string",
-            "nullable": true
-          },
           "isAgreed": {
             "type": "boolean"
           },
@@ -403,6 +357,72 @@
           },
           "place": {
             "type": "string",
+            "nullable": true
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddressDTO"
+            },
+            "nullable": true
+          },
+          "emergencyContacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmergencyContactDTO"
+            },
+            "nullable": true
+          },
+          "disabilityDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisabilityDetailDTO"
+            },
+            "nullable": true
+          },
+          "parentGuardians": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ParentGuardianDTO"
+            },
+            "nullable": true
+          },
+          "academicHistories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AcademicHistoryDTO"
+            },
+            "nullable": true
+          },
+          "extracurricularDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExtracurricularDetailDTO"
+            },
+            "nullable": true
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudentDocumentDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DisabilityDetailDTO": {
+        "required": [
+          "disabilityType"
+        ],
+        "type": "object",
+        "properties": {
+          "disabilityType": {
+            "$ref": "#/components/schemas/DisabilityType"
+          },
+          "disabilityPercentage": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },
@@ -430,6 +450,51 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "EmergencyContactDTO": {
+        "required": [
+          "contactName",
+          "contactNumber",
+          "relation"
+        ],
+        "type": "object",
+        "properties": {
+          "contactName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "relation": {
+            "$ref": "#/components/schemas/GardianType"
+          },
+          "contactNumber": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExtracurricularDetailDTO": {
+        "required": [
+          "scholarType"
+        ],
+        "type": "object",
+        "properties": {
+          "interests": {
+            "type": "string",
+            "nullable": true
+          },
+          "achievements": {
+            "type": "string",
+            "nullable": true
+          },
+          "scholarType": {
+            "$ref": "#/components/schemas/ScholarType"
+          },
+          "transportMethod": {
+            "$ref": "#/components/schemas/TransportationMethod"
+          }
+        },
+        "additionalProperties": false
       },
       "Faculty": {
         "enum": [
@@ -521,6 +586,47 @@
         "type": "integer",
         "format": "int32"
       },
+      "ParentGuardianDTO": {
+        "required": [
+          "fullName",
+          "mobileNumber",
+          "parentType"
+        ],
+        "type": "object",
+        "properties": {
+          "parentType": {
+            "$ref": "#/components/schemas/GardianType"
+          },
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "occupation": {
+            "type": "string",
+            "nullable": true
+          },
+          "designation": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobileNumber": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "gardianEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "annualFamilyIncome": {
+            "$ref": "#/components/schemas/AnnualIncome"
+          }
+        },
+        "additionalProperties": false
+      },
       "Qualification": {
         "enum": [
           0,
@@ -588,6 +694,23 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "StudentDocumentDTO": {
+        "required": [
+          "documentType",
+          "filePath"
+        ],
+        "type": "object",
+        "properties": {
+          "documentType": {
+            "$ref": "#/components/schemas/DocumentType"
+          },
+          "filePath": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       },
       "TransportationMethod": {
         "enum": [

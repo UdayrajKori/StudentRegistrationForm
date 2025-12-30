@@ -61,58 +61,6 @@ namespace StudentRegistrationForm.Services
             };
             await _unitOfWork.ContactDetails.AddAsync(contactDetail);
 
-            var parentGuardian = new ParentGuardian
-            {
-                StudentPid = studentPid,
-                ParentType = dto.ParentType,
-                FullName = dto.FullName,
-                Occupation = dto.Occupation,
-                Designation = dto.Designation,
-                Organization = dto.Organization,
-                MobileNumber = dto.MobileNumber,
-                GardianEmail = dto.GardianEmail,
-                AnnualFamilyIncome = dto.AnnualFamilyIncome,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.ParentGuardians.AddAsync(parentGuardian);
-
-            var emergencyContact = new EmergencyContact
-            {
-                StudentPid = studentPid,
-                ContactName = dto.ContactName,
-                Relation = dto.Relation,
-                ContactNumber = dto.ContactNumber,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.EmergencyContacts.AddAsync(emergencyContact);
-
-            var address = new Address
-            {
-                StudentPid = studentPid,
-                AddressType = dto.AddressType,
-                Province = dto.Province,
-                District = dto.District,
-                Municipality = dto.Municipality,
-                WardNumber = dto.WardNumber,
-                ToleStreet = dto.ToleStreet,
-                HouseNumber = dto.HouseNumber,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.Addresses.AddAsync(address);
-
-            var disabilityDetail = new DisabilityDetail
-            {
-                StudentPid = studentPid,
-                DisabilityType = dto.DisabilityType,
-                DisabilityPercentage = dto.DisabilityPercentage,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.DisabilityDetails.AddAsync(disabilityDetail);
-
             var financialDetail = new FinancialDetail
             {
                 StudentPid = studentPid,
@@ -148,20 +96,6 @@ namespace StudentRegistrationForm.Services
             };
             await _unitOfWork.CitizenshipDetails.AddAsync(citizenshipDetail);
 
-            var academicHistory = new AcademicHistory
-            {
-                StudentPid = studentPid,
-                Qualification = dto.Qualification,
-                BoardOrUniversity = dto.BoardOrUniversity,
-                InstitutionName = dto.InstitutionName,
-                PassedYear = dto.PassedYear,
-                DivisionOrGPA = dto.DivisionOrGPA,
-                MarksheetPath = dto.MarksheetPath,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.AcademicHistories.AddAsync(academicHistory);
-
             var academicEnrollment = new AcademicEnrollment
             {
                 StudentPid = studentPid,
@@ -180,28 +114,6 @@ namespace StudentRegistrationForm.Services
             };
             await _unitOfWork.AcademicEnrollments.AddAsync(academicEnrollment);
 
-            var extracurricularDetail = new ExtracurricularDetail
-            {
-                StudentPid = studentPid,
-                Interests = dto.Interests,
-                Achievements = dto.Achievements,
-                ScholarType = dto.ScholarType,
-                TransportMethod = dto.TransportMethod,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.ExtracurricularDetails.AddAsync(extracurricularDetail);
-
-            var studentDocument = new StudentDocument
-            {
-                StudentPid = studentPid,
-                DocumentType = dto.DocumentType,
-                FilePath = dto.FilePath,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow
-            };
-            await _unitOfWork.StudentDocuments.AddAsync(studentDocument);
-
             var declaration = new Declaration
             {
                 StudentPid = studentPid,
@@ -212,6 +124,143 @@ namespace StudentRegistrationForm.Services
                 UpdatedOn = DateTime.UtcNow
             };
             await _unitOfWork.Declarations.AddAsync(declaration);
+
+            // Handle Multiple Addresses
+            if (dto.Addresses != null && dto.Addresses.Any())
+            {
+                foreach (var addressDto in dto.Addresses)
+                {
+                    var address = new Address
+                    {
+                        StudentPid = studentPid,
+                        AddressType = addressDto.AddressType,
+                        Province = addressDto.Province,
+                        District = addressDto.District,
+                        Municipality = addressDto.Municipality,
+                        WardNumber = addressDto.WardNumber,
+                        ToleStreet = addressDto.ToleStreet,
+                        HouseNumber = addressDto.HouseNumber,
+                        CreatedOn = DateTime.UtcNow,
+                        UpdatedOn = DateTime.UtcNow
+                    };
+                    await _unitOfWork.Addresses.AddAsync(address);
+                }
+            }
+
+            // Handle Multiple Emergency Contacts
+            if (dto.EmergencyContacts != null && dto.EmergencyContacts.Any())
+            {
+                foreach (var contactDto in dto.EmergencyContacts)
+                {
+                    var emergencyContact = new EmergencyContact
+                    {
+                        StudentPid = studentPid,
+                        ContactName = contactDto.ContactName,
+                        Relation = contactDto.Relation,
+                        ContactNumber = contactDto.ContactNumber,
+                        CreatedOn = DateTime.UtcNow,
+                        UpdatedOn = DateTime.UtcNow
+                    };
+                    await _unitOfWork.EmergencyContacts.AddAsync(emergencyContact);
+                }
+            }
+
+            // Handle Multiple Disability Details
+            if (dto.DisabilityDetails != null && dto.DisabilityDetails.Any())
+            {
+                foreach (var disabilityDto in dto.DisabilityDetails)
+                {
+                    var disabilityDetail = new DisabilityDetail
+                    {
+                        StudentPid = studentPid,
+                        DisabilityType = disabilityDto.DisabilityType,
+                        DisabilityPercentage = disabilityDto.DisabilityPercentage,
+                        CreatedOn = DateTime.UtcNow,
+                        UpdatedOn = DateTime.UtcNow
+                    };
+                    await _unitOfWork.DisabilityDetails.AddAsync(disabilityDetail);
+                }
+            }
+
+            // Handle Multiple Parent/Guardians
+            if (dto.ParentGuardians != null && dto.ParentGuardians.Any())
+            {
+                foreach (var parentDto in dto.ParentGuardians)
+                {
+                    var parentGuardian = new ParentGuardian
+                    {
+                        StudentPid = studentPid,
+                        ParentType = parentDto.ParentType,
+                        FullName = parentDto.FullName,
+                        Occupation = parentDto.Occupation,
+                        Designation = parentDto.Designation,
+                        Organization = parentDto.Organization,
+                        MobileNumber = parentDto.MobileNumber,
+                        GardianEmail = parentDto.GardianEmail,
+                        AnnualFamilyIncome = parentDto.AnnualFamilyIncome,
+                        CreatedOn = DateTime.UtcNow,
+                        UpdatedOn = DateTime.UtcNow
+                    };
+                    await _unitOfWork.ParentGuardians.AddAsync(parentGuardian);
+                }
+            }
+
+            // Handle Multiple Academic Histories
+            if (dto.AcademicHistories != null && dto.AcademicHistories.Any())
+            {
+                foreach (var historyDto in dto.AcademicHistories)
+                {
+                    var academicHistory = new AcademicHistory
+                    {
+                        StudentPid = studentPid,
+                        Qualification = historyDto.Qualification,
+                        BoardOrUniversity = historyDto.BoardOrUniversity,
+                        InstitutionName = historyDto.InstitutionName,
+                        PassedYear = historyDto.PassedYear,
+                        DivisionOrGPA = historyDto.DivisionOrGPA,
+                        MarksheetPath = historyDto.MarksheetPath,
+                        CreatedOn = DateTime.UtcNow,
+                        UpdatedOn = DateTime.UtcNow
+                    };
+                    await _unitOfWork.AcademicHistories.AddAsync(academicHistory);
+                }
+            }
+
+            // Handle Multiple Extracurricular Details
+            if (dto.ExtracurricularDetails != null && dto.ExtracurricularDetails.Any())
+            {
+                foreach (var detail in dto.ExtracurricularDetails)
+                {
+                    var extracurricularDetail = new ExtracurricularDetail
+                    {
+                        StudentPid = studentPid,
+                        Interests = detail.Interests,
+                        Achievements = detail.Achievements,
+                        ScholarType = detail.ScholarType,
+                        TransportMethod = detail.TransportMethod,
+                        CreatedOn = DateTime.UtcNow,
+                        UpdatedOn = DateTime.UtcNow
+                    };
+                    await _unitOfWork.ExtracurricularDetails.AddAsync(extracurricularDetail);
+                }
+            }
+
+            // Handle Multiple Documents
+            if (dto.Documents != null && dto.Documents.Any())
+            {
+                foreach (var doc in dto.Documents)
+                {
+                    var studentDocument = new StudentDocument
+                    {
+                        StudentPid = studentPid,
+                        DocumentType = doc.DocumentType,
+                        FilePath = doc.FilePath,
+                        CreatedOn = DateTime.UtcNow,
+                        UpdatedOn = DateTime.UtcNow
+                    };
+                    await _unitOfWork.StudentDocuments.AddAsync(studentDocument);
+                }
+            }
 
             // Final save for all related entities
             await _unitOfWork.SaveChangesAsync();
@@ -230,7 +279,6 @@ namespace StudentRegistrationForm.Services
 
         public async Task<Student> GetStudentByPidAsync(Guid pid)
         {
-            // ✅ Fixed: Now uses GetByGuidAsync to match interface
             return await _unitOfWork.Students.GetByGuidAsync(pid);
         }
 

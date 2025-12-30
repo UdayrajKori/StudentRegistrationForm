@@ -18,4 +18,5 @@ namespace StudentRegistrationForm.Models
     }
 
     // navigation properties
+
 }
