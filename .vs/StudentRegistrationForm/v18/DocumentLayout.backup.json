@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\dtos\\responsedtos\\completeresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:dtos\\responsedtos\\completeresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\dtos\\requestdtos\\completerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:dtos\\requestdtos\\completerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Migrations\\20251230115241_initialDbCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251230115241_initialDbCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\enumvalues\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:enumvalues\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\interfaces\\serviceinterface\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:interfaces\\serviceinterface\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\interfaces\\repositoryinterfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:interfaces\\repositoryinterfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Migrations\\20251230114604_initialDbCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\models\\academicenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:models\\academicenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,28 +59,12 @@
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:models\\academichistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Migrations\\20251230113603_initialDbCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251230113603_initialDbCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\interfaces\\repositoryinterfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:interfaces\\repositoryinterfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\interfaces\\serviceinterface\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:interfaces\\serviceinterface\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\models\\studentdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,10 +115,6 @@
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\dtos\\requestdtos\\completerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:dtos\\requestdtos\\completerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -115,20 +123,16 @@
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\enumvalues\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:enumvalues\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Migrations\\20251229081914_InitialDatabaseExecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251229081914_InitialDatabaseExecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|d:\\nepal menotor\\projects\\asp.net core web api from basic\\studentregistrationform\\migrations\\20251230115241_initialdbcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B6E64D-B835-4630-ADAA-117230D4D7CE}|StudentRegistrationForm.csproj|solutionrelative:migrations\\20251230115241_initialdbcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,11 +142,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "EmergencyContact.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\EmergencyContact.cs",
               "RelativeDocumentMoniker": "Models\\EmergencyContact.cs",
@@ -151,18 +155,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T10:07:16.929Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "StudentController.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
               "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Controllers\\StudentController.cs",
               "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAABIAAAAAzczMzAwjwBsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T11:44:34.418Z",
               "EditorCaption": ""
@@ -170,6 +173,122 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CompleteResponseDTO.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\DTOs\\ResponseDTOs\\CompleteResponseDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\ResponseDTOs\\CompleteResponseDTO.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\DTOs\\ResponseDTOs\\CompleteResponseDTO.cs",
+              "RelativeToolTip": "DTOs\\ResponseDTOs\\CompleteResponseDTO.cs",
+              "ViewState": "AgIAAAcAAAAANDMzMzMvwA8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T12:40:53.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CompleteRequestDTO.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
+              "RelativeToolTip": "DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
+              "ViewState": "AgIAABwAAAAAMjMzMzP/vz8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T11:38:47.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "Services\\StudentService.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Services\\StudentService.cs",
+              "RelativeToolTip": "Services\\StudentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T11:38:31.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\EnumValues\\Enums.cs",
+              "RelativeDocumentMoniker": "EnumValues\\Enums.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\EnumValues\\Enums.cs",
+              "RelativeToolTip": "EnumValues\\Enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T09:06:03.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\ServiceInterface\\IStudentService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ServiceInterface\\IStudentService.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\ServiceInterface\\IStudentService.cs",
+              "RelativeToolTip": "Interfaces\\ServiceInterface\\IStudentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T11:37:10.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T11:01:26.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAEoAAABAzMzMzMwjwIIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T11:57:35.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T08:54:02.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
+              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAMAAACAmZmZmZktwAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T08:59:50.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "20251230115241_initialDbCreation.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Migrations\\20251230115241_initialDbCreation.cs",
               "RelativeDocumentMoniker": "Migrations\\20251230115241_initialDbCreation.cs",
@@ -177,12 +296,11 @@
               "RelativeToolTip": "Migrations\\20251230115241_initialDbCreation.cs",
               "ViewState": "AgIAAAUAAAAgMzMzMzMrwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T11:52:42.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T11:52:42.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "20251230114604_initialDbCreation.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Migrations\\20251230114604_initialDbCreation.cs",
               "RelativeDocumentMoniker": "Migrations\\20251230114604_initialDbCreation.cs",
@@ -190,25 +308,11 @@
               "RelativeToolTip": "Migrations\\20251230114604_initialDbCreation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T11:46:04.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T11:46:04.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAABgAAAAAMzMzMzMnwB8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T08:54:02.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Student.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\Student.cs",
               "RelativeDocumentMoniker": "Models\\Student.cs",
@@ -216,12 +320,11 @@
               "RelativeToolTip": "Models\\Student.cs",
               "ViewState": "AgIAAAwAAACAzszMzMwmwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T08:34:21.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-22T08:34:21.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "AcademicEnrollment.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\AcademicEnrollment.cs",
               "RelativeDocumentMoniker": "Models\\AcademicEnrollment.cs",
@@ -229,25 +332,11 @@
               "RelativeToolTip": "Models\\AcademicEnrollment.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAIvQsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:13:59.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:13:59.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Services\\StudentService.cs",
-              "RelativeDocumentMoniker": "Services\\StudentService.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Services\\StudentService.cs",
-              "RelativeToolTip": "Services\\StudentService.cs",
-              "ViewState": "AgIAAA4AAAAAzszMzMwkwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T11:38:31.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "AcademicHistory.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\AcademicHistory.cs",
               "RelativeDocumentMoniker": "Models\\AcademicHistory.cs",
@@ -255,12 +344,11 @@
               "RelativeToolTip": "Models\\AcademicHistory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:29:34.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:29:34.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "20251230113603_initialDbCreation.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Migrations\\20251230113603_initialDbCreation.cs",
               "RelativeDocumentMoniker": "Migrations\\20251230113603_initialDbCreation.cs",
@@ -268,38 +356,11 @@
               "RelativeToolTip": "Migrations\\20251230113603_initialDbCreation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T11:36:04.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T11:36:04.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\GenericRepository.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwB8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T11:01:26.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
-              "RelativeToolTip": "Interfaces\\RepositoryInterfaces\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T08:59:50.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Interfaces\\IUnitOfWork.cs",
@@ -307,25 +368,11 @@
               "RelativeToolTip": "Interfaces\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T11:49:26.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T11:49:26.206Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IStudentService.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\ServiceInterface\\IStudentService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\ServiceInterface\\IStudentService.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Interfaces\\ServiceInterface\\IStudentService.cs",
-              "RelativeToolTip": "Interfaces\\ServiceInterface\\IStudentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T11:37:10.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "StudentDocument.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\StudentDocument.cs",
               "RelativeDocumentMoniker": "Models\\StudentDocument.cs",
@@ -333,12 +380,11 @@
               "RelativeToolTip": "Models\\StudentDocument.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:37:40.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:37:40.577Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "PersonalDetails.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\PersonalDetails.cs",
               "RelativeDocumentMoniker": "Models\\PersonalDetails.cs",
@@ -346,12 +392,11 @@
               "RelativeToolTip": "Models\\PersonalDetails.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T09:55:38.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T09:55:38.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ParentGuardian.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\ParentGuardian.cs",
               "RelativeDocumentMoniker": "Models\\ParentGuardian.cs",
@@ -359,12 +404,11 @@
               "RelativeToolTip": "Models\\ParentGuardian.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:10:56.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:10:56.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "FinancialDetail.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\FinancialDetail.cs",
               "RelativeDocumentMoniker": "Models\\FinancialDetail.cs",
@@ -372,12 +416,11 @@
               "RelativeToolTip": "Models\\FinancialDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:33:37.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:33:37.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ExtracurricularDetail.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\ExtracurricularDetail.cs",
               "RelativeDocumentMoniker": "Models\\ExtracurricularDetail.cs",
@@ -385,12 +428,11 @@
               "RelativeToolTip": "Models\\ExtracurricularDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:42:39.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:42:39.196Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "DisabilityDetail.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\DisabilityDetail.cs",
               "RelativeDocumentMoniker": "Models\\DisabilityDetail.cs",
@@ -398,12 +440,11 @@
               "RelativeToolTip": "Models\\DisabilityDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T09:57:46.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T09:57:46.371Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Declaration.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\Declaration.cs",
               "RelativeDocumentMoniker": "Models\\Declaration.cs",
@@ -411,12 +452,11 @@
               "RelativeToolTip": "Models\\Declaration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:40:58.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:40:58.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "ContactDetail.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\ContactDetail.cs",
               "RelativeDocumentMoniker": "Models\\ContactDetail.cs",
@@ -424,12 +464,11 @@
               "RelativeToolTip": "Models\\ContactDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:03:53.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:03:53.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "CitizenshipDetail.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\CitizenshipDetail.cs",
               "RelativeDocumentMoniker": "Models\\CitizenshipDetail.cs",
@@ -437,12 +476,11 @@
               "RelativeToolTip": "Models\\CitizenshipDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:02:15.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:02:15.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "BankDetail.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\BankDetail.cs",
               "RelativeDocumentMoniker": "Models\\BankDetail.cs",
@@ -450,12 +488,11 @@
               "RelativeToolTip": "Models\\BankDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:35:24.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:35:24.097Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "Address.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\Address.cs",
               "RelativeDocumentMoniker": "Models\\Address.cs",
@@ -463,25 +500,11 @@
               "RelativeToolTip": "Models\\Address.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:09:13.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T10:09:13.058Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CompleteRequestDTO.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
-              "RelativeToolTip": "DTOs\\RequestDTOs\\CompleteRequestDTO.cs",
-              "ViewState": "AgIAADgAAAAACQAAAKA/wEMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T11:38:47.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -494,30 +517,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "Enums.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\EnumValues\\Enums.cs",
-              "RelativeDocumentMoniker": "EnumValues\\Enums.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\EnumValues\\Enums.cs",
-              "RelativeToolTip": "EnumValues\\Enums.cs",
-              "ViewState": "AgIAAL4AAAAAlZmZmZkBwMoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T09:06:03.706Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\UnitOfWork\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "UnitOfWork\\UnitOfWork.cs",
-              "ToolTip": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\UnitOfWork\\UnitOfWork.cs",
-              "RelativeToolTip": "UnitOfWork\\UnitOfWork.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAASwHgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T11:57:35.971Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "D:\\Nepal Menotor\\Projects\\ASP.NET CORE WEB API FROM BASIC\\StudentRegistrationForm\\Models\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Models\\BaseEntity.cs",

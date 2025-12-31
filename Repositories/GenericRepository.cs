@@ -7,13 +7,13 @@ namespace StudentRegistrationForm.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected readonly AppDbContext _context;
-        protected readonly DbSet<T> _dbSet;
+        private readonly AppDbContext _context;
+        private readonly DbSet<T> _dbSet;
 
         public GenericRepository(AppDbContext context)
         {
             _context = context;
-            _dbSet = _context.Set<T>();
+            _dbSet = context.Set<T>();
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -23,7 +23,7 @@ namespace StudentRegistrationForm.Repositories
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _dbSet.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id);
+            return await _dbSet.FindAsync(id);
         }
 
         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
@@ -44,6 +44,12 @@ namespace StudentRegistrationForm.Repositories
         public void Remove(T entity)
         {
             _dbSet.Remove(entity);
+        }
+
+        // Add this method - returns IQueryable for complex queries
+        public IQueryable<T> GetQueryable()
+        {
+            return _dbSet.AsQueryable();
         }
     }
 }

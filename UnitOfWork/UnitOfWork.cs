@@ -8,7 +8,7 @@ using System.Data;
 
 namespace StudentRegistrationForm.UnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork, IAsyncDisposable
+    public class UnitOfWork : IUnitOfWork  // ✅ Remove explicit IAsyncDisposable, it's in IUnitOfWork
     {
         private readonly AppDbContext _context;
         private bool _disposed;
@@ -80,7 +80,6 @@ namespace StudentRegistrationForm.UnitOfWork
             }
         }
 
-        // ✅ FIXED: Changed from Func<Action> to Action
         public async Task ExecuteTransactionAsync(Action action, CancellationToken cancellationToken = default)
         {
             using var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
@@ -113,6 +112,7 @@ namespace StudentRegistrationForm.UnitOfWork
             }
         }
 
+        // IAsyncDisposable implementation
         public async ValueTask DisposeAsync()
         {
             await DisposeAsyncCore();
@@ -131,6 +131,7 @@ namespace StudentRegistrationForm.UnitOfWork
             }
         }
 
+        // IDisposable implementation
         public void Dispose()
         {
             Dispose(true);

@@ -1,6 +1,59 @@
 [
   {
     "ContainingType": "StudentRegistrationForm.Controllers.StudentController",
+    "Method": "GetStudentByPid",
+    "RelativePath": "api/Student/{pid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentRegistrationForm.Controllers.StudentController",
+    "Method": "UpdateStudent",
+    "RelativePath": "api/Student/{pid}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "studentDto",
+        "Type": "StudentRegistrationForm.DTOs.RequestDTOs.CompleteRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentRegistrationForm.Controllers.StudentController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/Student/{pid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentRegistrationForm.Controllers.StudentController",
     "Method": "GetAllStudents",
     "RelativePath": "api/Student/all",
     "HttpMethod": "GET",
