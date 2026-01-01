@@ -149,3 +149,6 @@ D:\Nepal Menotor\Projects\ASP.NET CORE WEB API FROM BASIC\StudentRegistrationFor
 D:\Nepal Menotor\Projects\ASP.NET CORE WEB API FROM BASIC\StudentRegistrationForm\bin\Debug\net8.0\AutoMapper.dll
 D:\Nepal Menotor\Projects\ASP.NET CORE WEB API FROM BASIC\StudentRegistrationForm\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Nepal Menotor\Projects\ASP.NET CORE WEB API FROM BASIC\StudentRegistrationForm\bin\Debug\net8.0\StudentRegistrationForm.staticwebassets.runtime.json
+D:\Nepal Menotor\Projects\ASP.NET CORE WEB API FROM BASIC\StudentRegistrationForm\bin\Debug\net8.0\FluentValidation.dll
+D:\Nepal Menotor\Projects\ASP.NET CORE WEB API FROM BASIC\StudentRegistrationForm\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\Nepal Menotor\Projects\ASP.NET CORE WEB API FROM BASIC\StudentRegistrationForm\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
