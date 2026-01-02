@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using StudentRegistrationForm.DTOs.RequestDTOs;
+using StudentRegistrationForm.EnumValues;
 
 namespace StudentRegistrationForm.Validators
 {
@@ -32,9 +33,6 @@ namespace StudentRegistrationForm.Validators
             RuleFor(x => x.PlaceOfBirth)
                 .NotEmpty().WithMessage("Place of birth is required")
                 .Length(2, 100).WithMessage("Place of birth must be between 2 and 100 characters");
-
-            RuleFor(x => x.PhotoPath)
-                .MaximumLength(500).WithMessage("Photo path cannot exceed 500 characters");
 
             RuleFor(x => x.Nationality)
                 .IsInEnum().WithMessage("Invalid nationality");
@@ -95,7 +93,9 @@ namespace StudentRegistrationForm.Validators
                 .IsInEnum().WithMessage("Invalid level");
 
             RuleFor(x => x.AcademicYear)
-                .IsInEnum().WithMessage("Invalid academic year");
+                .Must(x => Enum.IsDefined(typeof(AcademicYear), x))
+                .WithMessage("Invalid academic year");
+
 
             RuleFor(x => x.Semester)
                 .IsInEnum().WithMessage("Invalid semester");
@@ -172,7 +172,6 @@ namespace StudentRegistrationForm.Validators
             RuleForEach(x => x.ParentGuardians).SetValidator(new ParentGuardianDTOValidator());
             RuleForEach(x => x.AcademicHistories).SetValidator(new AcademicHistoryDTOValidator());
             RuleForEach(x => x.ExtracurricularDetails).SetValidator(new ExtracurricularDetailDTOValidator());
-            RuleForEach(x => x.Documents).SetValidator(new StudentDocumentDTOValidator());
         }
 
         // Custom validation method for age
@@ -286,8 +285,8 @@ namespace StudentRegistrationForm.Validators
                 .When(x => !string.IsNullOrEmpty(x.GardianEmail));
 
             RuleFor(x => x.AnnualFamilyIncome)
-                .IsInEnum().WithMessage("Invalid annual income")
-                .When(x => x.AnnualFamilyIncome.HasValue);
+                .Must(x => Enum.IsDefined(typeof(AnnualIncome), x))
+                .WithMessage("Invalid annual income");
         }
     }
 
@@ -314,10 +313,6 @@ namespace StudentRegistrationForm.Validators
             RuleFor(x => x.DivisionOrGPA)
                 .NotEmpty().WithMessage("Division or GPA is required")
                 .Length(1, 20).WithMessage("Division/GPA must be between 1 and 20 characters");
-
-            RuleFor(x => x.MarksheetPath)
-                .MaximumLength(500).WithMessage("Marksheet path cannot exceed 500 characters")
-                .When(x => !string.IsNullOrEmpty(x.MarksheetPath));
         }
     }
 
@@ -343,17 +338,4 @@ namespace StudentRegistrationForm.Validators
         }
     }
 
-    // ===== STUDENT DOCUMENT VALIDATOR =====
-    public class StudentDocumentDTOValidator : AbstractValidator<StudentDocumentDTO>
-    {
-        public StudentDocumentDTOValidator()
-        {
-            RuleFor(x => x.DocumentType)
-                .IsInEnum().WithMessage("Invalid document type");
-
-            RuleFor(x => x.FilePath)
-                .NotEmpty().WithMessage("File path is required")
-                .Length(1, 500).WithMessage("File path must be between 1 and 500 characters");
-        }
-    }
 }

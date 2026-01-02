@@ -321,40 +321,37 @@
       },
       "AcademicProgram": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
+          "BTech",
+          "BBA",
+          "BSCCSIT",
+          "BA",
+          "Bed",
+          "LLB",
+          "DPharm",
+          "BPharm",
+          "BScAg",
+          "MA"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "AcademicStatus": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "Active",
+          "OnHold",
+          "Completed",
+          "DroppedOut"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "AcademicYear": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4
+          "FirstYear",
+          "SecondYear",
+          "ThirdYear",
+          "FourthYear",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "AddressDTO": {
         "required": [
@@ -399,48 +396,44 @@
       },
       "AddressType": {
         "enum": [
-          0,
-          1
+          "Permanent",
+          "Temporary"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "AnnualIncome": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "LessThan5Lakh",
+          "Between5And10Lakh",
+          "Between10And20Lakh",
+          "MoreThan20Lakh"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "BankName": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
+          "NabilBank",
+          "EverestBank",
+          "HimalayanBank",
+          "StandardChartered",
+          "NICAsia",
+          "SiddharthaBank",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "BloodGroup": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
+          "A_Positive",
+          "A_Negative",
+          "B_Positive",
+          "B_Negative",
+          "AB_Positive",
+          "AB_Negative",
+          "O_Positive",
+          "O_Negative"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "CompleteRequestDTO": {
         "type": "object",
@@ -662,26 +655,24 @@
       },
       "DisabilityType": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5
+          "None",
+          "VisualImpairment",
+          "HearingImpairment",
+          "MobilityImpairment",
+          "CognitiveImpairment",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "DocumentType": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4
+          "Photo",
+          "Signature",
+          "Citizenship",
+          "CharacterCertificate",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "EmergencyContactDTO": {
         "required": [
@@ -730,93 +721,86 @@
       },
       "Faculty": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          "Science",
+          "Management",
+          "Humanities",
+          "Education",
+          "Engineering",
+          "Law",
+          "Medicine",
+          "Agriculture",
+          "Arts",
+          "SocialSciences",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "FeeCategory": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "Regular",
+          "SelfFinanced",
+          "Scholarship",
+          "Quota"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "GardianType": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "Father",
+          "Mother",
+          "Guardian",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Gender": {
         "enum": [
-          0,
-          1,
-          2
+          "Male",
+          "Female",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Level": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4
+          "Diploma",
+          "Bachelor",
+          "Master",
+          "PhD",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "MaritalStatus": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "Single",
+          "Married",
+          "Divorced",
+          "Widowed"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Nationality": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
+          "Nepal",
+          "American",
+          "Canadian",
+          "British",
+          "Australian",
+          "Indian",
+          "Chinese",
+          "German",
+          "French",
+          "Japanese",
+          "Mexican",
+          "Brazilian",
+          "SouthAfrican",
+          "Italian",
+          "Russian",
+          "Spanish",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "ParentGuardianDTO": {
         "required": [
@@ -861,71 +845,66 @@
       },
       "Qualification": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
+          "SEE",
+          "SLC",
+          "PlusTwo",
+          "Bachelor",
+          "Master",
+          "PhD",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "ScholarType": {
         "enum": [
-          0,
-          1
+          "Hosteller",
+          "DayScholar"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "ScholarshipType": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "Government",
+          "Private",
+          "Institutional",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Section": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "Semester": {
         "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8
+          "FirstSemester",
+          "SecondSemester",
+          "ThirdSemester",
+          "FourthSemester",
+          "FifthSemester",
+          "SixthSemester",
+          "SeventhSemester",
+          "EighthSemester",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "StudentDocumentDTO": {
         "required": [
@@ -946,13 +925,12 @@
       },
       "TransportationMethod": {
         "enum": [
-          0,
-          1,
-          2,
-          3
+          "Walk",
+          "Bicycle",
+          "Bus",
+          "PrivateVehicle"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       }
     }
   }
